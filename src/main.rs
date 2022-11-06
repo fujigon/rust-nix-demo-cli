@@ -1,6 +1,8 @@
 use color_eyre::Result;
 use curl::easy::Easy;
+use ferris_says::say;
 use serde::{Deserialize, Serialize};
+use std::io::{stdout, BufWriter};
 
 #[derive(Serialize, Deserialize)]
 struct GitHubRelease {
@@ -24,8 +26,10 @@ fn main() -> Result<()> {
     }
 
     let response: GitHubRelease = serde_json::from_slice(&buf)?;
+    let out = format!("The latest version of rust is {} now.", response.tag_name);
 
-    println!("The latest version of rust is {} now.", response.tag_name);
+    let writer = BufWriter::new(stdout());
 
+    say(&out, out.len(), writer)?;
     Ok(())
 }
