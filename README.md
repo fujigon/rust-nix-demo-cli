@@ -30,6 +30,8 @@ Permanently,
 
 ```bash
 nix profile install 'git+https://github.com/fujigon/rust-nix-demo-cli#rust-nix-demo-cli'
+rust-nix-demo-cli
+bash -c rust-nix-demo-cli
 ```
 
 ## How to build
