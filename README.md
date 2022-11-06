@@ -1,5 +1,15 @@
 # rust-nix-demo-cli
 
+## Prerequisites
+
+The followings are required for the both purposes of using and developing this tool.
+
+- [Nix](https://nixos.org/download.html#download-nix) is installed in your system
+- [Flake is enabled in your Nix](https://nixos.wiki/wiki/Flakes#Permanent)
+
+Note that no extra tool/toolchain is needed in your system even for compiling this tool.
+Nix provisions everything for and only for this repository.
+
 ## How to just use
 
 Execute it for oneshot,
