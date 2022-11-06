@@ -29,7 +29,7 @@ exit
 Permanently,
 
 ```bash
-nix profile 'git+https://github.com/fujigon/rust-nix-demo-cli#rust-nix-demo-cli'
+nix profile install 'git+https://github.com/fujigon/rust-nix-demo-cli#rust-nix-demo-cli'
 ```
 
 ## How to build
